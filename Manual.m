@@ -7,32 +7,42 @@ while 1
         case 'uparrow'
             brick.StopAllMotors('Brake');
             brick.MoveMotor('B', 40);
-            brick.MoveMotor('C', 43);
+            brick.MoveMotor('C', 42);
+            disp('Drive Forward');
             
-            disp('Forward');
         case 'downarrow'
             brick.StopAllMotors('Brake');
             brick.MoveMotor('B', -40);
-            brick.MoveMotor('C', -43);
+            brick.MoveMotor('C', -42);            
+            disp('Drive Backward');
             
-            disp('Backward');
         case 'leftarrow'
             brick.MoveMotorAngleRel('C', 40, 270, 'Brake');
-            disp('Left');
+            disp('Drive Left');
+            
         case 'rightarrow'
             brick.MoveMotorAngleRel('C', 40, -270, 'Brake');
-            disp('Right');
+            disp('Drive Right');
+            
         case 'w'
             brick.MoveMotorAngleRel('A', 40, -120, 'Brake');
-            disp('Up');
+            disp('Move Lift Up');
+            
         case 's'
             brick.MoveMotorAngleRel('A', 40, 120, 'Brake');
-            disp('Down');
+            disp('Move Lift Down');
+            
+        case 'l'
+            Ultra;
+            disp('Ultra');q
+            
         case 'a'
             brick.StopAllMotors('Brake');
+            disp('Stopped');
             
         case 'q'
             brick.StopAllMotors('Brake');
+            disp('Ended');
             break;
     end
 end
