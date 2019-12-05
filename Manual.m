@@ -1,3 +1,4 @@
+% Manual mode - Team 2
 global key
 InitKeyboard();
 
@@ -5,24 +6,24 @@ while 1
     pause(0.1);
     switch key
         case 'uparrow'
-            brick.StopAllMotors('Brake');
-            brick.MoveMotor('B', 40);
-            brick.MoveMotor('C', 42);
+            brick.StopAllMotors('Brake'); 
+            brick.MoveMotor('B', 70);
+            brick.MoveMotor('C', 70);
             disp('Drive Forward');
             
         case 'downarrow'
             brick.StopAllMotors('Brake');
-            brick.MoveMotor('B', -40);
-            brick.MoveMotor('C', -42);            
+            brick.MoveMotor('B', -70);
+            brick.MoveMotor('C', -70);            
             disp('Drive Backward');
             
         case 'leftarrow'
-            brick.MoveMotorAngleRel('C', 40, 270, 'Brake');
-            disp('Drive Left');
+            brick.MoveMotorAngleRel('C', 40, 360, 'Brake');
+            disp('Turn Left');
             
         case 'rightarrow'
-            brick.MoveMotorAngleRel('C', 40, -270, 'Brake');
-            disp('Drive Right');
+            brick.MoveMotorAngleRel('C', 40, -360, 'Brake');
+            disp('Turn Right');
             
         case 'w'
             brick.MoveMotorAngleRel('A', 40, -120, 'Brake');
@@ -31,10 +32,6 @@ while 1
         case 's'
             brick.MoveMotorAngleRel('A', 40, 120, 'Brake');
             disp('Move Lift Down');
-            
-        case 'l'
-            Ultra;
-            disp('Ultra');q
             
         case 'a'
             brick.StopAllMotors('Brake');
