@@ -7,14 +7,14 @@ while 1
     switch key
         case 'uparrow'
             brick.StopAllMotors('Brake'); 
-            brick.MoveMotor('B', 70);
-            brick.MoveMotor('C', 70);
+            brick.MoveMotor('B', 50);
+            brick.MoveMotor('C', 50);
             disp('Drive Forward');
             
         case 'downarrow'
             brick.StopAllMotors('Brake');
-            brick.MoveMotor('B', -70);
-            brick.MoveMotor('C', -70);            
+            brick.MoveMotor('B', -40);
+            brick.MoveMotor('C', -40);            
             disp('Drive Backward');
             
         case 'leftarrow'
